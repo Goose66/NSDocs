@@ -1,26 +1,42 @@
 # evldsc-pg3
-A Nodeserver for Polyglot v3 (PG3) that interfaces with a DSC PowerSeries alarm panel through EnvisaLink 3, EnvisaLink 4, and DUO adapaters from EyezOn. See http://www.eyezon.com/ for more information.
-
+A Nodeserver for Polyglot v3 (PG3) that interfaces with a DSC PowerSeries™ alarm panel through EnvisaLink™ EVL-3/4 and DUO™ adapaters from EyezOn. See http://www.eyezon.com/ for more information.
 
 ### Instructions for PG3 installation:
-
 From the Polyglot Dashboard:
 1. Install the EnvisaLink-DSC nodeserver from the Polyglot NodeServer Store.
-2. Add/modify the following Configuration Parameters under Configuration (note that the keys should automatically be added for required parameters):
-      
-    #### Custom Configuration Parameters:
-    - key: hostname, value: locally accessible hostname or IP address of EnvisaLink or DUO device (e.g., "envisalink.local" or "192.168.1.145") (required)
-    - key: password, value: password for EnvisaLink device (required)
-    - key: usercode, value: user code for disarming alarm panel (e.g., "5555") (required)
-    - key: numpartitions, value: number of partition nodes to generate (optional - defaults to 1)
-    - key: numzones, value: number of zone nodes to generate (optional - defaults to 8)
-    - key: numcmdouts, value: number of command output nodes to generate (optional - defaults to 2)
-    - key: disablewatchdog, value: 0 or 1 for whether EyezOn cloud service watchdog timer should be disabled (optional - defaults to 0 - not disabled)
-    - key: zonetimerdumpflag, value: numeric flag indicating whether dumping of the zone timers should be done on shortpoll (1), longpoll (2), or disabled altogether (0) (optional - defaults to 1 - shortpoll)
+2. Add/modify the following required Configuration Parameters under Configuration (note that the keys should automatically be added for required parameters):
+    - key: hostname, value: locally accessible hostname or IP address of EnvisaLink or DUO device (e.g., "envisalink.local" or "192.168.1.145")
+    - key: password, value: password for EnvisaLink device
+    - key: usercode, value: user code for disarming alarm panel (e.g., "5555")
+3. You can also add the following optional Configuration Parameters under Configuration:
+    - key: numpartitions, value: number of partition nodes to generate (defaults to 1)
+    - key: numzones, value: number of zone nodes to generate (defaults to 8)
+    - key: numcmdouts, value: number of command output nodes to generate (defaults to 2)
+    - key: disablewatchdog, value: 0 or 1 for whether EyezOn cloud service watchdog timer should be disabled (defaults to 0 - not disabled)
+    - key: zonetimerdumpflag, value: numeric flag indicating whether dumping of the zone timers should be done on shortpoll (1), longpoll (2), or disabled altogether (0) (defaults to 1 - shortpoll)
 
-    Once the required configuration parameters have been saved, the nodeserver will attempt to connect to the EnvisaLink device and then update the panel, partition, and zone states. This will take a couple of minutes depending on shortpoll interval, so please be patient. Check the Polyglot Dashboard for notices regarding bad configuration parameters and connection failure conditions.
+Once the required configuration parameters have been saved, the nodeserver will attempt to connect to the EnvisaLink device and then update the panel, partition, and zone states. This will take a couple of minutes depending on the shortpoll interval, so please be patient. Check the Polyglot Dashboard for notices regarding bad configuration parameters and connection failure conditions.
 
-Notes for latest version (v3.0.8)
+### Using the nodeserver events (commands)
+The nodes of the EnvisaLink-DSC Nodeserver generate the following incoming commands to the ISY, allowing the nodes to be added as controllers to scenes:
+
+ZONE
+- Sends a *DON* command when the zone is opened
+- Sends a *DOF* command when the zone is closed
+
+PARTITION
+- Sends a *DON* command when the partition is alarming
+- Sends a *DOF* command when the partition is disarmed
+
+COMMAND_OUTPUT
+- Sends a *DON* command when the command output is activated
+
+PANEL
+- Sends a *DON* command when a smoke/panic alarm is activated
+- Sends a *DOF* command when an active smoke/panic alarm is cleared
+- Sends a *AWAKE* command periodically for heartbeat monitoring
+
+### Notes for latest version (v3.0.8)
 
 1. The command output nodes are limited to partition 1 only. These Command Output nodes send *DON* commands, but not *DOF* commands.
 2. Initially, there are several state values that are unknown when the nodeserver starts and will default to 0 (or last known value if restarted). This includes trouble states, door chime, and the like. These state values may not be correct until the status is changed while the nodeserver is running.
