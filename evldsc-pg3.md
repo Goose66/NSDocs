@@ -51,3 +51,11 @@ PANEL
 11. Due to the way zone bypass states are updated by the DSC system, zones may require up to two shortpoll intervals (e.g., 60 seconds) for their Zone Bypassed bypass state to update after a partition is disarmed and returns to the ready state.
 
 For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/340-envisalink-dsc/.
+
+### Version History
+v3.0.8 - Initial Release (2022-03-15)
+- Converted to PG3 API
+- Refactored code to be more readable and better structured
+- Added Toggle Bypass to zone nodes with bypass update functionality
+- Added better error handling in API module
+- Fixed state updates after Key Alarm (Fire/Auxilary/Police) restoral
