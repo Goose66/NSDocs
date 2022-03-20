@@ -18,23 +18,23 @@ From the Polyglot Dashboard:
 Once the required configuration parameters have been saved, the nodeserver will attempt to connect to the EnvisaLink device and then update the panel, partition, and zone states. This will take a couple of minutes depending on the shortpoll interval, so please be patient. Check the Polyglot Dashboard for notices regarding bad configuration parameters and connection failure conditions.
 
 ### Using the nodeserver events (commands)
-The nodes of the EnvisaLink-DSC Nodeserver generate the following incoming commands to the ISY, allowing the nodes to be added as controllers to scenes:
+The nodes of the EnvisaLink-DSC Nodeserver generate the following incoming commands to the ISY, allowing the nodes to be added as controllers to scenes and the commands to be used as triggers in programs:
 
 ZONE
-- Sends a *DON* command when the zone is opened
-- Sends a *DOF* command when the zone is closed
+- Sends a *DON* ("Opened") command when the zone is opened
+- Sends a *DOF* ("Closed") command when the zone is closed
 
 PARTITION
-- Sends a *DON* command when the partition is alarming
-- Sends a *DOF* command when the partition is disarmed
+- Sends a *DON* ("Alarm Triggered") command when the partition is alarming
+- Sends a *DOF* ("Alarm Restored") command when the partition is disarmed
 
 COMMAND_OUTPUT
-- Sends a *DON* command when the command output is activated
+- Sends a *DON* ("Activate Output") command when the command output is activated
 
 PANEL
-- Sends a *DON* command when a smoke/panic alarm is activated
-- Sends a *DOF* command when an active smoke/panic alarm is cleared
-- Sends an *AWAKE* command periodically for heartbeat monitoring
+- Sends a *DON* ("Alarm Triggered") command when a smoke/panic alarm is activated
+- Sends a *DOF* ("Alarm Restored") command when an active smoke/panic alarm is cleared
+- Sends an *AWAKE* ("Heartbeat") command periodically for heartbeat monitoring
 
 ### Notes for latest version (v3.0.8)
 
