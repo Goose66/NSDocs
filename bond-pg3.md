@@ -1,4 +1,4 @@
-# bond-pg3
+# BondBridge
 A NodeServer for Polyglot v3 that interfaces with Olibra Bond Bridges and Smart by Bond (SBB) devices locally to allow the ISY to control ceiling fans, lights, blinds, fireplaces, and more. See https://bondhome.io/ for more information on Olibra Bond Bridge.
 
 ### Instructions for PG3 installation:
@@ -28,6 +28,5 @@ v3.0.9 - Bug fix (2022-02-27) (Current)
 v3.0.8 - Initial Release (2022-02-26)
 - Converted Bond-polyglotv2 to PG3 API
 - Refactored code to fit PG3 design model (nslib)
-
 
 For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/329-bond/.
