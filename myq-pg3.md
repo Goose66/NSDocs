@@ -1,4 +1,4 @@
-# myq-pg3
+# MyQ
 A NodeServer for Polyglot v3 (PG3) that interfaces with LiftMaster/Chamberlain MyQ Web Service to allow the ISY 994i to control LiftMaster/Chamberlain MyQ compatible garage door openers, light modules, locks, and more. See https://www.liftmaster.com/myqcompatibility for compatible devices.
 
 ### Instructions for PG3 installation:
@@ -30,5 +30,10 @@ Notes for latest version (v3.0.18)
 7. To delete a device, you must use the PG3 Dashboard to ensure the device does not reappear in the ISY Admin Console the next time that Polyglot and/or the MyQ nodeserver are restarted.
 8. The nodeserver will filter non-ASCII characters from the device description, like accent or Kanji characters, before adding the node to the ISY. You can rename the nodes in the ISY as you like.
 9. Because of the longer than normal polling period (20 seconds), you may want to structure your programs in the ISY to perform a Force Update on the MyQ Service Node before other programs that depend on the door status are executed.
+
+### Version History
+v3.0.18 - Initial Release (2022-02-07)
+- Converted myq-polyglotv2 to PG3 API
+- Refactored code to fit PG3 design model (nslib)
 
 For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/328-myq/.
