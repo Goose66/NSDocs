@@ -1,4 +1,4 @@
-# evldsc-pg3
+# EnvisaLink-DSC
 A Nodeserver for Polyglot v3 (PG3) that interfaces with a DSC PowerSeries™ alarm panel through EnvisaLink™ EVL-3/4 and DUO™ adapaters from EyezOn. See http://www.eyezon.com/ for more information.
 
 ### Instructions for PG3 installation:
