@@ -7,7 +7,7 @@ From the Polyglot Dashboard:
 1. Install the BondBridge nodeserver from the Polyglot NodeServer Store.
 2. Once the BondBridge Nodeserver is running, unlock the Bond devices on your network (e.g., power cycle your Bond bridge(s)) and then click "Discover" in the Dashboard to load nodes for each device discovered. Once a bridge is unlocked by power cycling, you have 10 minutes to intiate the Discover command. THIS PROCESS MAY TAKE SEVERAL SECONDS depending on the number of Bond Bridges and devices there are, so please be patient and wait a minute or two before retrying. Also, please check the Polyglot Dashboard for messages regarding Discover failure conditions.
 
-### Release Notes (v3.0.9)
+### Release Notes (v3.0.10)
    
 1. Your Bond bridge may not be discoverable by the automatic Discover routine depending on the configuration of your network and Wi-Fi. If your Bond Bridge or SBB device is not discoverable, you may connect to it manually by adding the following Custom Configuration Parameters under Configuration in the Polyglot Dashboard and then re-running the Discover command:
     
@@ -22,7 +22,10 @@ From the Polyglot Dashboard:
 5. If your fan has an uplight and downlight, the nodserver will create two light nodes that you can turn on and off seperately. The result of setting the brightness level of either (if available) is unknown since I did not have such a fan to test with.
 
 ### Version History
-v3.0.9 - Bug fix (2022-02-27) (Current)
+3.0.10 - Bug fix (2022-08-31) (Current)
+- Fixed parsing of device list from API to account for extraneous hash added in v3 firmware
+
+v3.0.9 - Bug fix (2022-02-27) 
 - Fixed editors in profile
 
 v3.0.8 - Initial Release (2022-02-26)
