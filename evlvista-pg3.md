@@ -1,7 +1,12 @@
 # EnvisaLink-HW
 A node server for Polyglot v3 (PG3) that interfaces with a Honeywell Vista series alarm panel through EnvisaLink™ EVL-3/4 and DUO™ adapaters from EyezOn. See http://www.eyezon.com/ for more information.
 
-### Instructions for PG3 installation:
+### Prerequisites
+Before installing the node server, make sure your EnvisaLink device is connected to your compatible Honeywell/Ademco Vista alarm panel and your home network and is accessible via a web browser at http://envisalink.local or http://<device IP>. You will need to know the user ID ("user") and password (defaults to "user") for the EnvisaLink device. In addition, make sure that the additional programming steps for your alarm panel to ensure full functionality with the EnvisaLink device have been performed, as outlined in the installation instructions. The installation instructions may be found here (last verified 2022-09-28):
+
+https://www.eyez-on.com/EZMAIN/EyezonEnvisalinkHoneywellInstallationGuide2018.pdf
+
+### Instructions for installation of node server:
 From the Polyglot Dashboard:
 1. Install the EnvisaLink-HW node server from the Polyglot Node Server Store.
 2. Add/modify the following required Configuration Parameters under Configuration (note that the keys should automatically be added for required parameters):
@@ -20,16 +25,12 @@ From the Polyglot Dashboard:
 ### Using the node server events (commands)
 The nodes of the EnvisaLink-Vista Node Server generate the following incoming commands to the ISY, allowing the nodes to be added as controllers to scenes and the commands to be used as triggers in programs:
 
-ZONE
-- Sends a *DON* ("Opened") command when the zone is opened
-- Sends a *DOF* ("Closed") command when the zone is closed
-
 PARTITION
 - Sends a *DON* ("Alarm Triggered") command when the partition is alarming
 - Sends a *DOF* ("Alarm Restored") command when the partition is disarmed
 
 PANEL
-- Sends an *AWAKE* ("Heartbeat") command periodically for heartbeat monitoring (not currently functioning)
+- Sends an *AWAKE* ("Heartbeat") command periodically for heartbeat monitoring (not currently implemented)
 
 ### Notes for latest version (v3.0.3)
 
