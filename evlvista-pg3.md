@@ -44,7 +44,7 @@ PANEL
 6. With SmartZoneTracking enabled, the node server keeps up with the state of zones (open, closed) instead of relying on the EnvisaLink's zone state tracking. States for bypassed zones show as "Unknown." If the feature is disabled, then the node server relies on the zone state tracking in the EnvisaLink. Either way, zone states are squirrely.
 7. Bypass and SmartZoneTracking (probably) only work for zones in partition 1. The behavior for zones in other partitions is undefined.
 
-For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/340-envisalink-hw/.
+For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/390-envisalink-hw/.
 
 ### Version History
 3.0.3 - Initial Release (2022-09-28)
