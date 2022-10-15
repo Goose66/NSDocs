@@ -15,7 +15,7 @@ From the Polyglot Dashboard:
 4. If a thermostat control rule is violated, like setting the heat and cool setpoint too close to each other in Auto mode or trying to change fan mode or setpoints when in Away mode, a warning is logged in the log and the command is ignored. There is currently no way to send such warning or error messages back to the ISY.
 5. Once added takes long time
 
-For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/340-venstarct/.
+For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/393-venstarct/.
 
 ### Version History
 Current release:
