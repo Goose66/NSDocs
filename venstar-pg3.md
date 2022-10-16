@@ -10,15 +10,34 @@ From the Polyglot Dashboard:
 
 ### Notes for latest version (v3.0.5)
 1. Currently only residential ColorTouch thermostats (T7800, T7850, and T7900) are supported.
-2. The nodeserver relies on polling of the Venstar ColorTouch thermostats, so there may be some latency (up to shortPoll seconds) for reflections of changes in state.
-3. All thermostats will get at least one child node for a sensor labeled "Thermostat." If you don't have any other remote sensors, this is redundant, and it will be removed in a future version.
-4. If a thermostat control rule is violated, like setting the heat and cool setpoint too close to each other in Auto mode or trying to change fan mode or setpoints when in Away mode, a warning is logged in the log and the command is ignored. There is currently no way to send such warning or error messages back to the ISY.
-5. Once added takes long time
+2. When Thermostat nodes are initially added in discovery, it may take several minutes (at least one longpoll interval) before all state values are updated.
+3. The nodeserver relies on polling of the Venstar ColorTouch thermostats, so there may be some latency (up to shortPoll seconds) for reflections of changes in state.
+4. All thermostats will get at least one child node for a sensor labeled "Thermostat." If you don't have any other remote sensors, this is redundant, and it will be removed in a future version.
+5. If a thermostat control rule is violated, like setting the heat and cool setpoint too close to each other in Auto mode or trying to change fan mode or setpoints when in Away mode, a warning is logged in the log and the command is ignored. There is currently no way to send such warning or error messages back to the ISY.
+6. The reported rutimes rollover a configured time (currently 9 minutes) after midnight. This is to allow you to snapshot the runtimes at midnight (or even a couple minutes after to account for longpoll interval) for the present day (e.g., if you are aggregating over some longer period) even if the times on the Polisy and on the thermostat are not exactly synchornized. 
 
 For discussion and feedback, please use the ISY Forums here: https://forum.universal-devices.com/forum/393-venstarct/.
 
 ### Version History
 Current release:
-3.0.5 - Initial Release (2022-09-28)
+3.0.9 - Bug fixes (2022-10-16)
+- fixed runtimes and added rollover delay
+- fixed profile editors to show values in condition builder
+
+Previous releases:
+3.0.8 - Bug fixes and new features (2022-10-15)
+- Fixed heat/cool state
+- changed mode change processing to account for away mode changes
+- added humidifier set point and active state
+- added runtimes 
+
+3.0.7 - bug fix (2022-10-07)
+- Fixed load of existing sensor nodes
+
+3.0.6 - Testing release (2022-10-06)
+- Fixed dependencies in requirements.txt
+- Added dump of runtimes to log in longpoll
+
+3.0.5 - Initial release (2022-10-04)
 - Converted VenstarCT Polyglot v2 node server to PG3 API
 - Fixed up reporting of schedule modes (parts)
