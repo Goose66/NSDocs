@@ -8,7 +8,7 @@ From the Polyglot Dashboard:
 3. Make sure your Venstar ColorTouch thermostat(s) are powered on, unlocked, and on the same local network subnet as your Polisy. 
 4. From the Polyglot Dashboard, select "Details" and then click the "DISCOVER" button to load nodes for each thermostat found on the network. THIS PROCESS WILL TAKE AT LEAST 10 SECONDS, depending on the number of thermostats you have, so please be patient before retrying. Also, please check the Polyglot Dashboard for messages regarding Discover failure conditions. Alternatively, for any thermostats not found (e.g., not on the same LAN subnet but reachable from your Polisy), you can add a locally accessible hostname or IP address of the thermostat to the "hostname" Custom Configuration Parameters under "Configuration," and then rerun the Discover process. Multiple hostnames can be entered, separated by semicolons (;). Note that any existing, working thermostats in the nodeserver need not be specified again.
 
-### Notes for latest version (v3.0.5)
+### Notes for latest version (v3.0.10)
 1. Currently only residential ColorTouch (T5800, T7800, T7850, and T7900) and Explorer (T2000, T2100, T3700, T3800, T3890, T3950) thermostats are supported.
 2. Be sure to check if your thermostat requires the "Local API" setting to be enabled before executing discovery.
 3. When Thermostat nodes are initially added in discovery, it may take several minutes (at least one longpoll interval) before all state values are updated.
@@ -21,10 +21,12 @@ For discussion and feedback, please use the ISY Forums here: https://forum.unive
 
 ### Version History
 Current release:
+
 3.0.10 - Bug fixes (2022-11-28)
 - changed UOM for heat/cool state to ISY Index (25)
 
 Previous releases:
+
 3.0.9 - Bug fixes (2022-10-16)
 - fixed runtimes and added rollover delay
 - fixed profile editors to show values in condition builder
