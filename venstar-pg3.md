@@ -21,11 +21,14 @@ For discussion and feedback, please use the ISY Forums here: https://forum.unive
 
 ### Version History
 Current release:
+3.0.10 - Bug fixes (2022-11-28)
+- changed UOM for heat/cool state to ISY Index (25)
+
+Previous releases:
 3.0.9 - Bug fixes (2022-10-16)
 - fixed runtimes and added rollover delay
 - fixed profile editors to show values in condition builder
 
-Previous releases:
 3.0.8 - Bug fixes and new features (2022-10-15)
 - Fixed heat/cool state
 - changed mode change processing to account for away mode changes
