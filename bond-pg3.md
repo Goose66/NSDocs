@@ -7,7 +7,7 @@ From the Polyglot Dashboard:
 1. Install the BondBridge node server from the Polyglot Node Server Store.
 2. Once the BondBridge node server is running, unlock the Bond devices on your network (e.g., power cycle your Bond bridge(s)) and then click "Discover" in the Dashboard to load nodes for each device discovered. Once a bridge is unlocked by power cycling, you have 10 minutes to intiate the Discover command. THIS PROCESS MAY TAKE SEVERAL SECONDS depending on the number of Bond Bridges and devices there are, so please be patient and wait a minute or two before retrying. Also, please check the Polyglot Dashboard for messages regarding Discover failure conditions.
 
-### Release Notes (v3.0.10)
+### Release Notes (v3.1.12)
    
 1. Your Bond bridge may not be discoverable by the automatic Discover routine depending on the configuration of your network and Wi-Fi. If your Bond Bridge or SBB device is not discoverable, you may connect to it manually by adding the following Custom Configuration Parameters under Configuration in the Polyglot Dashboard and then re-running the Discover command:
     
@@ -20,9 +20,22 @@ From the Polyglot Dashboard:
 3. Only very basic functionality for shades, fireplaces, and generic devices (just Open/Close or On/Off functionality). Additional functionality will be added when users with these devices are available to test new code.
 4. The ST driver of Ceiling Fan nodes reflects the current speed of the fan as a percentage of the maximum speed, with 0 being 0% (Off) and the maximum speed being 100%. In order to set the fan to a specific, known speed, use the Set Speed command. The Set Speed command lets you set the speed to up to 10 speed numbers. Speed numbers over the maximum speed set the fan to the maximum speed.
 5. If your fan has an uplight and downlight, the nodserver will create two light nodes that you can turn on and off seperately. The result of setting the brightness level of either (if available) is unknown since I did not have such a fan to test with.
+6. Increase Speed (%) and Decrease Speed (%) increase and decrese the fan speed percentage by approx. 3%. This is to mimic BRT and DIM commands in Insteon which brighten and dim lights/devices over 32 steps. The hope is that you can drop a SwitchLinc dimmer in a scene with the fan and the bright/dim functionality will work intuitively over the LEDs displayed to control the fan speed. Increase Speed (#) and Decrease Speed (#) increase and decrease the fan speed by one speed number.
+7. This node server contains Alpha support for Sidekick Scene Keypads on Bond Bridge Pro. Functionality may not behave as expected.
 
 ### Version History
-3.0.10 - Bug fixes (2022-09-18)(Current)
+3.1.12 - Patch (2023-01-27)
+- Quick fix for bad removal of files
+
+3.1.11 - New features and fixes (2023-01-27)
+- Added support for Sidekick Scene Keypads on Bond Bridge Pro
+- Change way brt and dim commands are handled for fan speed
+- Change way brt and dim commands are handled for light
+- Update bridge hostname and token if already exists
+- Ignore devices with no actions (log warning)
+- Reorgnized file structure to be more asyncio friendly
+
+3.0.10 - Bug fixes (2022-09-18)
 - Fixed ignoring new "__" hash value in device list from API
 - Fixed missing NLS entry for "Force Update" button label on Bridge nodes
 - Increased wait time for newly discovered Bridge nodes to initialize to up to 1100ms before device discovery
