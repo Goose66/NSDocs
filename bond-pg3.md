@@ -7,7 +7,7 @@ From the Polyglot Dashboard:
 1. Install the BondBridge node server from the Polyglot Node Server Store.
 2. Once the BondBridge node server is running, unlock the Bond devices on your network (e.g., power cycle your Bond bridge(s)) and then click "Discover" in the Dashboard to load nodes for each device discovered. Once a bridge is unlocked by power cycling, you have 10 minutes to intiate the Discover command. THIS PROCESS MAY TAKE SEVERAL SECONDS depending on the number of Bond Bridges and devices there are, so please be patient and wait a minute or two before retrying. Also, please check the Polyglot Dashboard for messages regarding Discover failure conditions.
 
-### Release Notes (v3.1.12)
+### Release Notes (v3.1.13)
    
 1. Your Bond bridge may not be discoverable by the automatic Discover routine depending on the configuration of your network and Wi-Fi. If your Bond Bridge or SBB device is not discoverable, you may connect to it manually by adding the following Custom Configuration Parameters under Configuration in the Polyglot Dashboard and then re-running the Discover command:
     
@@ -24,6 +24,14 @@ From the Polyglot Dashboard:
 7. This node server contains Alpha support for Sidekick Scene Keypads on Bond Bridge Pro. Functionality may not behave as expected.
 
 ### Version History
+3.1.13 - Bug Fixes (2023-02-01)
+- Changed several DEBUG log messages to INFO level
+- Fixed bug in hooking BPUP_EventListener callback for keypad events 
+- Added subset to all editors in nodedefs
+- Append key number to name on node creation
+- Fix error when closing BPUP socket
+- Prevent polling from trying to update state for keypads
+
 3.1.12 - Patch (2023-01-27)
 - Quick fix for bad removal of files
 
