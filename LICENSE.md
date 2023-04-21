@@ -6,7 +6,7 @@ By downloading and installing the selected PG3 Node Server (“Software”), you
 
 **LICENSE GRANTED**
 
-Subject to any license term and/or obligation to pay one-time or periodic monetary fees outlined in the selected Available Purchase/Install Option of the PG3 Node Server Store, such term and fees which may be adjusted from time to time, Licensor hereby grants, and Licensee hereby accepts, a non-exclusive, perpetual, and non-transferable license to use the Software. The parties agree that Licensor shall continue to own all right, title and interest in and to the Software and all intellectual property rights embodied therein or related thereto including, but not limited to, the source and object codes and any customizations, updates and corrections to the Software. Except as expressly provided herein, no intellectual property rights are granted to Licensee by implication, estoppel, or otherwise.
+Subject to any term and/or obligation to pay one-time or periodic fees outlined in the selected Available Purchase/Install Option of the PG3 Node Server Store, such term and fees which may be adjusted from time to time, Licensor hereby grants, and Licensee hereby accepts, a non-exclusive, perpetual, and non-transferable license to use the Software. The parties agree that Licensor shall continue to own all right, title and interest in and to the Software and all intellectual property rights embodied therein or related thereto including, but not limited to, the source and object codes and any customizations, updates and corrections to the Software. Except as expressly provided herein, no intellectual property rights are granted to Licensee by implication, estoppel, or otherwise.
  
 **SOFTWARE PROVIDED “AS IS”**
 
