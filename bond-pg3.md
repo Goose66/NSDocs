@@ -1,7 +1,7 @@
 # BondBridge
 A Node Server for Polyglot v3 that interfaces with Olibra Bond Bridges and Smart by Bond (SBB) devices locally to allow the ISY to control ceiling fans, lights, blinds, fireplaces, and more. See https://bondhome.io/ for more information on Olibra Bond Bridge.
 
-***NOTICE***: A recent change to the eISY/Polisy firmware has broken the Bond Bridge Discovery process. We are looking for a workaround, but in the meantime please retrieve the IP address and token from the Bond Home mobile app for each Bond Bridge or SBB device on your LAN and add them in a semicolon separated-list to the "hostname" and "token" custom configuration parameters, respectively, before pressing the "Discover" button on the Dashboard. This will allow the node server to discover your devices setup on all of your Bond Bridges without relying on the Discovery process to find the bridges on the LAN.
+***NOTICE***: A recent change to the eISY/Polisy firmware has broken the Bond Bridge Discovery process. We are looking for a workaround, but in the meantime please retrieve the IP address and token from the Bond Home mobile app for each Bond Bridge or SBB device on your LAN and add them in a semicolon separated-list to the "hostname" and "token" custom configuration parameters, respectively, before pressing the "Discover" button on the Dashboard. This will allow the node server to discover your devices setup on all of your Bond Bridges without relying on the Discovery process to find the bridges on the LAN (see release note # 1 below).
 
 ### Instructions for PG3 installation:
 
