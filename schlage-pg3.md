@@ -1,5 +1,5 @@
 # Schlage
-A Node Server for Polyglot v3 (PG3) that interfaces with Schlage cloud service to allow the IoX to control Schlage locks. See <a href="https://www.schlage.com/en/home/products/products-smart-locks/schlage-encode/wifi-smart-lock-listing.html" target="_blank">WiFi Smart Locks | Schlage Encode</a> for compatible devices.
+A Node Server for Polyglot v3 (PG3) that interfaces with Schlage cloud service to allow the IoX to control Schlage Encode WiFi locks and Schlage Sense locks with Sense WiFi Adapter. See <a href="https://www.schlage.com/en/home/products/products-smart-locks/schlage-encode/wifi-smart-lock-listing.html" target="_blank">WiFi Smart Locks | Schlage Encode</a> for compatible devices.
 
 ### Instructions for PG3 installation:
 
