@@ -25,4 +25,4 @@ From the Polyglot Dashboard:
 ### Version History
 v3.0.1 - Initial Release (2023-07-13)
 
-For discussion and feedback, please use the UD Forums <a href="https://forum.universal-devices.com/forum/328-myq/" target="_blank">here</a>.
+For discussion and feedback, please use the UD Forums <a href="https://forum.universal-devices.com/forum/429-schlage/" target="_blank">here</a>.
