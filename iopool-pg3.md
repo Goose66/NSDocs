@@ -19,6 +19,6 @@ From the Polyglot Dashboard:
 3. The nodeserver will filter non-ASCII characters from the pool title (name), like accent or Kanji characters, before adding the node to IoX. You can rename the nodes in IoX as you like.
 
 ### Version History
-v3.0.1 - Initial Release (2023-07-13)
+v3.0.1 - Initial Release (2023-07-18)
 
 For discussion and feedback, please use the UD Forums <a href="https://forum.universal-devices.com/forum/430-iopool/" target="_blank">here</a>.
