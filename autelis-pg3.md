@@ -6,15 +6,16 @@ A Node Server for Polyglot v3 (PG3) that interfaces with an Autelis Pool Control
 From the Polyglot Dashboard:
 1. Install the Autelis node server from the Polyglot Node Server Store.
 2. Add/modify the following Custom Configuration Parameter under Configuration (note that the key should automatically be added for required parameters):
-    
+       
     - key: hostname, value: hostname or IP address of the Autelis device (required)
     - key: username, value: username for logging into the Autelis device (required)
     - key: password, value: password for logging into the Autelis device (required)
     - key: disableListener, value: 1 to disable the TCP listener for realtime state updates (optional - defaults to 0)
     - key: ignoreSolar, value: 1 to ignore Solar Heat settings (optional - defaults to 0)
 
-Once the required configuration parameters have been saved, the node server will attempt setup a connection to your Autelis Pool Control device. Check the Polyglot Dashboard for notices regarding bad configuration parameters (i.e., bad login credentials) and any connection failure conditions.
-3. Once a connection is estalished, the node server will automatically load nodes for the Pool Controller and attached devices.
+    Once the required configuration parameters have been saved, the node server will attempt setup a connection to your Autelis Pool Control device. Check the Polyglot Dashboard for notices regarding bad configuration parameters (i.e., bad login credentials) and any connection failure conditions.
+
+3.  Once a connection is estalished, the node server will automatically load nodes for the Pool Controller and attached devices.
 
 ### Notes for latest version (v3.0.1)
 
