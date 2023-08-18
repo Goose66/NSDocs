@@ -32,4 +32,4 @@ From the Polyglot Dashboard:
 ### Version History
 3.0.1 - Initial Release (2023-08-20)
 
-For discussion and feedback, please use the UD Forums <a href="https://forum.universal-devices.com/forum/431-aqualink/" target="_blank">here</a>.
+For discussion and feedback, please use the UD Forums <a href="https://forum.universal-devices.com/forum/431-autelis/" target="_blank">here</a>.
