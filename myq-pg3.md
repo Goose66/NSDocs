@@ -1,7 +1,7 @@
 # MyQ
-A NodeServer for Polyglot v3 (PG3) that interfaces with LiftMaster/Chamberlain MyQ Web Service to allow the ISY 994i to control LiftMaster/Chamberlain MyQ compatible garage door openers, light modules, locks, and more. See https://www.liftmaster.com/myqcompatibility for compatible devices.
+A node server for PG3/PG3x that interfaces with LiftMaster/Chamberlain MyQ Web service to allow the IoX to control LiftMaster/Chamberlain MyQ compatible garage door openers, light modules, locks, and more. See https://www.liftmaster.com/myqcompatibility for compatible devices.
 
-### Instructions for PG3 installation:
+### Instructions for PG3/PG3x installation:
 
 From the Polyglot Dashboard:
 1. Install the MyQ nodeserver from the Polyglot NodeServer Store.
@@ -14,7 +14,7 @@ From the Polyglot Dashboard:
     Once the required configuration parameters have been saved, the nodeserver will attempt to connect to the MyQ Service. This may take a couple of minutes, so be patient.  Check the Polyglot Dashboard for notices regarding bad configuration parameters and connection failure conditions.
 3. Once the MyQ Service node appears in the ISY Adminstative Console and the MyQ Service shows as connected, click "Discover Devices" in the MyQ Service node to load nodes for the gateways, garage door openers, light modules, locks, etc. configured in your account.
 
-### Notes for latest version (v3.1.21)
+### Notes for latest version (v3.2.22)
 
 1. Please don't set the shortPoll value to an extremely low value, e.g. < 10 seconds. Repeated, frequent polling of the MyQ service may result in Chamberlain making moves to block access by the node server.
 2. On the first start of the node server, the node server does not attempt to connect and login to the MyQ service until the first longpoll after the configuration parameters are entered and save (log message: "Re-establishing MyQ connection in longPoll()"). That means it may take up to 60 seconds before a connection is attempted after entering your credentials. In addition, the nodeserver will continue to attempt to connect and login every longpoll (e.g., every 60 seconds) until a connection is established, so watch your Polyglot Dashboard messages for connection errors or bad credentials to avoid locking out your account.
@@ -28,6 +28,11 @@ From the Polyglot Dashboard:
 10. This version includes locks but lock nodes show the status only. In order to add control for locks, a donation of hardware is needed to develop and test.
 
 ### Version History
+3.2.22 - Bug Fixes (2023-09-14)
+- added user-configurable User-Agent in oAuth and REST calls
+- added PG3 managed Node Server Status
+- removed version.txt file
+
 3.1.21 - Bug Fix (2023-01-01)
 - added removal of obsolete files in install.sh
 
