@@ -37,11 +37,10 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
 * Martin Jerry US-FC-01 Fan Controller:
     - Template={"NAME":"US-FC-01","GPIO":[1,1,1,1,1,1,0,0,1,1,1,1,1,0],"FLAG":0,"BASE":54}
     - Commands:
-        * Rule1
-        ON TuyaReceived#Data=55AA03070005030400010016 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 0} ENDON
-        ON TuyaReceived#Data=55AA03070005030400010117 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 1} ENDON
-        ON TuyaReceived#Data=55AA03070005030400010218 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 2} ENDON
-        ON TuyaReceived#Data=55AA03070005030400010319 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 3} ENDON
+        * Rule1 ON TuyaReceived#Data=55AA03070005030400010016 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 0} ENDON
+            ON TuyaReceived#Data=55AA03070005030400010117 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 1} ENDON
+            ON TuyaReceived#Data=55AA03070005030400010218 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 2} ENDON
+            ON TuyaReceived#Data=55AA03070005030400010319 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 3} ENDON
         * Rule1 1
 
 HumiditySwitch:
