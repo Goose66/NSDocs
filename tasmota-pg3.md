@@ -31,23 +31,24 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
 * Martin Jerry US-SD-TC01 Dimmer:
     - Template: "NAME":"US-SD-TC01","GPIO":[1,1,1,1,1,1,0,0,1,1,1,1,1,0],"FLAG":0,"BASE":54}
     - Commands:
-        SetOption20 0
-        SetOption54 0
+        * SetOption20 0
+        * SetOption54 0
 
 * Martin Jerry US-FC-01 Fan Controller:
     - Template={"NAME":"US-FC-01","GPIO":[1,1,1,1,1,1,0,0,1,1,1,1,1,0],"FLAG":0,"BASE":54}
-    - Rule1:
+    - Commands:
+        * Rule1
         ON TuyaReceived#Data=55AA03070005030400010016 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 0} ENDON
         ON TuyaReceived#Data=55AA03070005030400010117 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 1} ENDON
         ON TuyaReceived#Data=55AA03070005030400010218 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 2} ENDON
         ON TuyaReceived#Data=55AA03070005030400010319 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 3} ENDON
-    - Activate Rule1: Rule1 1
+        * Rule1 1
 
 HumiditySwitch:
 SetOption8 = <0 = C (default), 1 = F>
 
 ### Version history:
-3.0.1 - Initial Release (2023-10-05)
+3.0.1 - Initial Release (2023-10-10)
 - Supports:
     * Martin Jerry (MJ) MJ-S01 Switch
     * MJ Plug V by MJ (Plug-in  Module)
