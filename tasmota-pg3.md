@@ -8,7 +8,7 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
 3. Once the node server is running, check the notifications in the Polyglot V3 Dashboard to see if there are any problems connecting with the local MQTT broker.
 4. If there were no errors connecting to the MQTT broker, click the "Discover" button in the Polyglot V3 Dashboard for the node server to discover and load nodes for the Tasmota devices connected to the MQTT broker.
 
-### Notes for latest version (v3.0.1):
+### Notes for latest version (v3.0.4):
 1. The following devices are currently supported:
     * Martin Jerry (MJ) MJ-S01 Switch (Switch)
     * MJ Plug V by MJ (Plug-in  Module)
@@ -17,12 +17,13 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
     * MJ US-SS01 Switch (Switch)
     * MJ US-SS02 Switch (Humidity Switch)
     * Shelly 1 (Switch)
-2. Autoconfiguration of the devices (configuration beyond MQTT broker) may be turned on or off using the following optional Custom Configuration Parameter:
+2. This node server requires at least version 3.1.23 of PG3 or PG3x (in order to ensure the local MQTT broker is installed).
+3. Autoconfiguration of the devices (configuration beyond MQTT broker) may be turned on or off using the following optional Custom Configuration Parameter:
     * key: autoconfigure, value: flag indicating whether node server should attempt to configure discovered devices (optional - defaults to 1 (enabled))
 NOTE: Autoconfiguration of devices is not yet implemented (except for telemetry period). Be sure to follow instructions below to configure your devices to operate properly with the node server. 
-3. The telemetry period indicates the frequency that the Tasmota devices will report their state to the node server independent of state changes. If autoconfiguration is enabled, the telemetry period of each discovered device is set to 60 seconds. To adjust the telemetry period configured for discovered devices (e.g., to reduce network load), use the following optional Custom Configuration Parameter:
+4. The telemetry period indicates the frequency that the Tasmota devices will report their state to the node server independent of state changes. If autoconfiguration is enabled, the telemetry period of each discovered device is set to 60 seconds. To adjust the telemetry period configured for discovered devices (e.g., to reduce network load), use the following optional Custom Configuration Parameter:
     * key: teleperiod, value: number of seconds for devices to report status (optional - defaults to 60)
-4. The node server supports use of an alternate MQTT broker other than the local (Polisy/eISY) MQTT broker, but this capability has not been tested. To use an alternate MQTT broker, add or modify the following optional Custom Configuration Parameter under Configuration: 
+5. The node server supports use of an alternate MQTT broker other than the local (Polisy/eISY) MQTT broker, but this capability has not been tested. To use an alternate MQTT broker, add or modify the following optional Custom Configuration Parameter under Configuration: 
     * key: autoconfigure, value: flag indicating whether node server should attempt to configure discovered devices (optional - defaults to 1 (enabled))
     * key: mqtthost, value: hostname for alternate MQTT broker (optional - defaults to "localhost")
     * key: mqttport, value: port number for alternate MQTT broker (optional - defaults to 1884)
@@ -70,7 +71,7 @@ The following configuration changes must be made to each Tasmota device on your 
         (paste into "Template" field and select "Activate" checkbox)
 
 ### Version history:
-3.0.1 - Initial Release (2023-10-10)
+3.0.4 - Initial Release (2023-10-10)
 - Added support for:
     * Martin Jerry (MJ) MJ-S01 Switch
     * MJ Plug V by MJ (Plug-in  Module)
