@@ -23,8 +23,7 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
 NOTE: Autoconfiguration of devices is not yet implemented (except for telemetry period). Be sure to follow instructions below to configure your devices to operate properly with the node server. 
 4. The telemetry period indicates the frequency that the Tasmota devices will report their state to the node server independent of state changes. If autoconfiguration is enabled, the telemetry period of each discovered device is set to 60 seconds. To adjust the telemetry period configured for discovered devices (e.g., to reduce network load), use the following optional Custom Configuration Parameter:
     * key: teleperiod, value: number of seconds for devices to report status (optional - defaults to 60)
-5. The node server supports use of an alternate MQTT broker other than the local (Polisy/eISY) MQTT broker, but this capability has not been tested. To use an alternate MQTT broker, add or modify the following optional Custom Configuration Parameter under Configuration: 
-    * key: autoconfigure, value: flag indicating whether node server should attempt to configure discovered devices (optional - defaults to 1 (enabled))
+5. The node server supports use of an alternate MQTT broker other than the local (Polisy/eISY) MQTT broker, but this capability has not been tested. To use an alternate MQTT broker, add or modify the following optional Custom Configuration Parameters under Configuration: 
     * key: mqtthost, value: hostname for alternate MQTT broker (optional - defaults to "localhost")
     * key: mqttport, value: port number for alternate MQTT broker (optional - defaults to 1884)
     * key: mqttclientid, value: client ID for connecting to MQTT broker (optional - defaults to "TASMOTA_NS")
