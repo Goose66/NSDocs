@@ -51,7 +51,7 @@ The following configuration changes must be made to each Tasmota device on your 
 
 - Martin Jerry US-FC-01 Fan Controller:
    * Under "Configure Other":
-      - Template={"NAME":"US-FC-01","GPIO":[1,1,1,1,1,1,0,0,1,1,1,1,1,0],"FLAG":0,"BASE":54}
+      - Template: {"NAME":"US-FC-01","GPIO":[1,1,1,1,1,1,0,0,1,1,1,1,1,0],"FLAG":0,"BASE":54}
         (paste into "Template" field and select "Activate" checkbox)
    * Using the "Console", enter the following commands:
       - Rule1 ON TuyaReceived#Data=55AA03070005030400010016 DO publish2 tasmota/stat/%topic%/STATE {"Speed": 0} ENDON
@@ -63,6 +63,11 @@ The following configuration changes must be made to each Tasmota device on your 
 - Martin Jerry US-SS02 Humidity Switch:
    * Using the "Console", enter the following commands:
       - SetOption8 = <0 = C (default), 1 = F> (sets your desired temp unit reporting)
+
+- Shelly 1
+   * Under "Configure Other":
+      - Template: {"NAME":"Shelly 1","GPIO":[1,1,0,1,224,192,0,0,0,0,0,0,0,0],"FLAG":0,"BASE":46} 
+        (paste into "Template" field and select "Activate" checkbox)
 
 ### Version history:
 3.0.1 - Initial Release (2023-10-10)
