@@ -8,6 +8,16 @@ A plugin for PG3/PG3x that allows IoX to access and control the functions of Lif
 3. Once the plugin is running, check the notifications in the Polyglot V3 Dashboard to see if there are any problems connecting with the local MQTT broker.
 4. If there were no notifications from the plugin, click the "Discover" button in the Polyglot V3 Dashboard for the plugin to discover and load nodes for the garage door openers with connected ratgdo devices.
 
+### <a name="config">Device configuration:</a>
+The following configuration changes must be made to each ratgdo device on your LAN for it to work properly with the plugin. These configuration changes can be made through the local configuration web page on the ratgdo device (i.e., http://\<ratgdo IP address\>). Note that the ratgdo configuration page will require you to set an "OTA & Web Config Password" upon initial configuration. Make sure  you don't forget this password! In order to gain subsequent access to the configuration page, you must authenticate with a username of the ratgdo "Device Name" and the "OTA & Web Config Password" that you set. If you forget the password, you will have to reflash the device and start again.
+Configuration settings that must be changed/verified comprise:
+   * Make sure the "Enable MQTT" checkbox is checked.
+   * Set the "MQTT server IP" to the IP address of your Polisy or eISY (unless using an alternate MQTT broker).
+   * Set the "MQTT server port" to 1884 (unless using an alternate MQTT broker).
+   * MQTT server username and password need not be changed if using the default Polisy or eISY broker.
+   * Set the "MQTT Topic Prefix" to "ratgdons/" (including the trailing forward slash).
+   * Leave the "Home Assistant Discovery Prefix" set to "homeassistant" unless you changed it for your configuration - see discussion of the "discoverytopicprefix" Custom Configuration Parameter above.
+
 ### Notes for latest version (v3.0.1):
 1. ***NOTE*** This version is PRERELEASE and has only been tested with a dry contact (Genie Pro Screw Drive) GDO with minimal changes to the default ratgdo configuration. Further, while the "Device Name" is used for both MQTT topics for the device and for node addrsess in the plugin, this version of the plugin was tested with the default device name (i.e., "ratgdo-#####"). Changing the device name to include spaces, special charachters, and the like has not been tested and may break something.
 2. This plugin requires at least version 3.1.20 of PG3/PG3x and version 5.6.2 of IoX (in order to ensure the local MQTT broker is installed).
@@ -23,16 +33,6 @@ A plugin for PG3/PG3x that allows IoX to access and control the functions of Lif
 - key: password, value: password for authenticating with alternate MQTT broker (optional)
 8. If you have changed the HA dicovery topic prefix in your HA  configuration and want to use this plugin for IoX, then you can set the discovery topic prefix for HA discovery using the following optional Custom Configuration Parameter: 
 - key: discoverytopicprefix, value: string topic prefix for HA Discovery Prefix (optional - defaults to "homeassistant")
-
-### <a name="config">Device configuration:</a>
-The following configuration changes must be made to each ratgdo device on your LAN for it to work properly with the plugin. These configuration changes can be made through the local configuration web page on the ratgdo device (i.e., http://\<ratgdo IP address\>). Note that the ratgdo configuration page will require you to set an "OTA & Web Config Password" upon initial configuration. Make sure  you don't forget this password! In order to gain subsequent access to the configuration page, you must authenticate with a username of the ratgdo "Device Name" and the "OTA & Web Config Password" that you set. If you forget the password, you will have to reflash the device and start again.
-Configuration settings that must be changed/verified comprise:
-   * Make sure the "Enable MQTT" checkbox is checked.
-   * Set the "MQTT server IP" to the IP address of your Polisy or eISY (unless using an alternate MQTT broker).
-   * Set the "MQTT server port" to 1884 (unless using an alternate MQTT broker).
-   * MQTT server username and password need not be changed if using the default Polisy or eISY broker.
-   * Set the "MQTT Topic Prefix" to "ratgdons/" (including the trailing forward slash).
-   * Leave the "Home Assistant Discovery Prefix" set to "homeassistant" unless you changed it for your configuration - see discussion of the "discoverytopicprefix" Custom Configuration Parameter above.
 
 ### Version history:
 3.0.1 - Pre-release (2023-12-20)
