@@ -21,7 +21,7 @@ A plugin for PG3/PG3x that allows IoX to access and control the functions of Lif
 - key: mqttclientid, value: client ID for connecting to alternate MQTT broker (optional - defaults to "RATGDONS")
 - key: username, value: username for authenticating with alternate MQTT broker (optional)
 - key: password, value: password for authenticating with alternate MQTT broker (optional)
-6. If you have changed the HA dicovery topic prefix in your HA  configuration and want to use this plugin for IoX, then you can set the discovery topic prefix for HA discovery using the following optional Custom Configuration Parameter: 
+8. If you have changed the HA dicovery topic prefix in your HA  configuration and want to use this plugin for IoX, then you can set the discovery topic prefix for HA discovery using the following optional Custom Configuration Parameter: 
 - key: discoverytopicprefix, value: string topic prefix for HA Discovery Prefix (optional - defaults to "homeassistant")
 
 ### <a name="config">Device configuration:</a>
