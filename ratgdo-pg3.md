@@ -1,5 +1,5 @@
 # ratgdo
-A plugin for PG3/PG3x that allows IoX to access and control the functions of Liftmaster and Chamberlain garage door openers (GDOs) as well as basic support for other brands which use dry contacts to control the door. See https://paulwieland.github.io/ratgdo/ for general information on the ratgdo device, ordering, flashin, installation, and configuration instructions. For support and feedback on the plugin itself, please use the UD Forums here.
+A plugin for PG3/PG3x that allows IoX to access and control the functions of Liftmaster and Chamberlain garage door openers (GDOs) as well as basic support for other brands which use dry contacts to control the door. See https://paulwieland.github.io/ratgdo/ for general information on the ratgdo device, ordering, flashing, installation, and configuration instructions. For support and feedback on the plugin itself, please use the UD Forums [here](https://forum.universal-devices.com/forum/436-ratgdo/).
 
 ### Instructions for use:
 
