@@ -35,4 +35,8 @@ Configuration settings that must be changed/verified comprise:
 - key: discoverytopicprefix, value: string topic prefix for HA Discovery Prefix (optional - defaults to "homeassistant")
 
 ### Version history:
-3.0.1 - Pre-release (2023-12-20)
+3.0.2 - Bug Fixes (2023-12-20)
+- bug fixes from initial field testing
+- changed door state driver to index w/ text labels
+
+3.0.1 - Pre-release (2023-12-19)
