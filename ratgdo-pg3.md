@@ -3,7 +3,7 @@ A plugin for PG3/PG3x that allows IoX to access and control the functions of Lif
 
 ### Instructions for use:
 
-1. Once your ratgdo device(s) are installed and connected to your LAN (Wifi), follow the [Device configuration](#config) instructions below to configure the device(s) to use MQTT to connect to the Polisy/eISY MQTT broker (or an alternate MQTT broker).
+1. Once your ratgdo device(s) are installed and connected to your LAN (Wifi), follow the [Device configuration](#config) instructions below to configure the device(s) to use MQTT to connect to the built-in Polisy/eISY MQTT broker (or select an alternate MQTT broker).
 2. From the Polyglot V3 Dashboard, install the ratgdo plugin from the Plugins Store.
 3. Once the plugin is running, check the notifications in the Polyglot V3 Dashboard to see if there are any problems connecting with the local MQTT broker.
 4. If there were no notifications from the plugin, click the "Discover" button in the Polyglot V3 Dashboard for the plugin to discover and load nodes for the garage door openers with connected ratgdo devices.
