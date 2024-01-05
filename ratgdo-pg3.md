@@ -15,7 +15,7 @@ Configuration settings that must be changed/verified comprise:
    * Set the "MQTT server IP" to the IP address of your Polisy or eISY (unless using an alternate MQTT broker).
    * Set the "MQTT server port" to 1884 (unless using an alternate MQTT broker).
    * MQTT server username and password need not be changed if using the default Polisy or eISY broker.
-   * Leave the "Home Assistant Discovery Prefix" set to "homeassistant" unless you changed it for your configuration - see discussion of the "discoverytopicprefix" Custom Configuration Parameter above.
+   * Leave the "Home Assistant Discovery Prefix" set to "homeassistant" unless you changed it for your configuration - see discussion of the "discoverytopicprefix" Custom Configuration Parameter in notes below.
 
 ### Notes for latest version (v3.1.4):
 1. This plugin requires at least version 3.1.20 of PG3/PG3x and version 5.6.2 of IoX (in order to ensure the local MQTT broker is installed).
