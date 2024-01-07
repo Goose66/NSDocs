@@ -17,6 +17,8 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
     * MJ US-SS01 Switch (Switch)
     * MJ US-SS02 Switch (Humidity Switch)
     * Shelly 1 (Switch)
+    * Sonoff Mini R2 (Switch)
+    * Sonoff Mini R4 (Switch)
 2. This node server requires at least version 3.1.23 of PG3 or PG3x (in order to ensure the local MQTT broker is installed).
 3. Autoconfiguration of the devices (configuration beyond MQTT broker) may be turned on or off using the following optional Custom Configuration Parameter:
     * key: autoconfigure, value: flag indicating whether node server should attempt to configure discovered devices (optional - defaults to 1 (enabled))
@@ -29,6 +31,9 @@ NOTE: Autoconfiguration of devices is not yet implemented (except for telemetry 
     * key: mqttclientid, value: client ID for connecting to MQTT broker (optional - defaults to "TASMOTA_NS")
     * key: username, value: username for authenticating with alternate MQTT broker (optional)
     * key: password, value: password for authenticating with alternate MQTT broker (optional)
+6. If the MQTT configuration of your devices is already setup to support another home automation controller (e.g., Home Assistant) and you cannot use the default "tasmota/" topic prefix for your devices (see "Full Topic" configuration below), you can change the topic prefix that the plugin will look for with the following optional Custom Configuration Parameter:
+    * key: mqtttopicprefix, value: topic prefix for topic subscriptions (optional)
+The specified topic prefix value must match the prefix value in the full topic configured for the Tasmota devices. If no mqtttopicprefix parameter is specified, then the topic prefix defaults to "tasmota/". An empty topic prefix value is valid. If a non-empty topic prefix parameter is specified, it must include the trailing "/".
 
 ### Device configuration:
 The following configuration changes must be made to each Tasmota device on your network for it to work properly with the node server. These configuration changes can be made through the "Configuration" section of the web user interface for each Tasmota device.
@@ -69,7 +74,26 @@ The following configuration changes must be made to each Tasmota device on your 
       - Template: {"NAME":"Shelly 1","GPIO":[1,1,0,1,224,192,0,0,0,0,0,0,0,0],"FLAG":0,"BASE":46} 
         (paste into "Template" field and select "Activate" checkbox)
 
+- Sonoff Mini R2
+   * Under "Configure Other":
+      - Template: {"NAME":"Sonoff MINIR2","GPIO":[17,0,0,0,9,0,0,0,21,157,0,0,0],"FLAG":0,"BASE":1}
+        (paste into "Template" field and select "Activate" checkbox)
+
+- Sonoff Mini Extreme R4
+   * Under "Configure Other":
+      - Template: {"NAME":"Sonoff MINIR4","GPIO":[32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,576,0,0,0,0,0,0,224,160,0,0,0,0,0,0,0,0,0,0,0,0],"FLAG":0,"BASE":1}
+        (paste into "Template" field and select "Activate" checkbox)
+
 ### Version history:
+3.1.6 - New Devices and Reliability Enhancements (2024-01-07)
+- Added support for:
+    * Sonoff Mini R2 (Switch)
+    * Sonoff Mini R4 (Switch)
+- Reworked override of MQTT topic prefix
+- Added code for beta testing support of seeedstudio HP sensor (HP Sensor)
+- Added check for correct full topic configuration in discovery
+- Added check for connection and reconnection attempt in shortpoll
+
 3.0.4 - Initial Release (2023-10-10)
 - Added support for:
     * Martin Jerry (MJ) MJ-S01 Switch
