@@ -8,7 +8,7 @@ A Node Server for Polyglot V3 that allows IoX to access and control Martin Jerry
 3. Once the node server is running, check the notifications in the Polyglot V3 Dashboard to see if there are any problems connecting with the local MQTT broker.
 4. If there were no errors connecting to the MQTT broker, click the "Discover" button in the Polyglot V3 Dashboard for the node server to discover and load nodes for the Tasmota devices connected to the MQTT broker.
 
-### Notes for latest version (v3.0.4):
+### Notes for latest version (v3.1.6):
 1. The following devices are currently supported:
     * Martin Jerry (MJ) MJ-S01 Switch (Switch)
     * MJ Plug V by MJ (Plug-in  Module)
