@@ -36,20 +36,20 @@ Configuration settings that must be changed/verified comprise:
 10. If upgrading your plugin from a version earlier than v3.1.4, you will need to delete your existing GDO and Light nodes (in the PG3 Dashboard) and then perform the Discovery process again. However, the node addresses of the nodes will remain the same, so any programs you have should continue to work without modification.
    
 ### Version history:
-3.2.5 - New Features (2024-01-31)
+v3.2.5 - New Features (2024-01-31)
 - GDO nodes have motion state 
 - GDO nodes send DON3 ("Motion") command on motion "events"
 - GDO motion state set to clear 60 seconds after last motion event
 - Names added to driver list (in PG3 dashboard)
 - Light nodes now child nodes of GDO nodes
 
-3.1.4 - Upgrades (2024-01-05)
+v3.1.4 - Upgrades (2024-01-05)
 - discovered devices subscribe to own topics eliminating some configuration
 - GDO and Light nodes send DON and DOF commands in response to status change
 - completed implementation of support for alternative MQTT brokers
   
-3.0.2 - Bug Fixes (2023-12-20)
+v3.0.2 - Bug Fixes (2023-12-20)
 - bug fixes from initial field testing
 - changed door state driver to index w/ text labels
 
-3.0.1 - Pre-release (2023-12-19)
+v3.0.1 - Pre-release (2023-12-19)
