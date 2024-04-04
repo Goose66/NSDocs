@@ -15,7 +15,7 @@ From the Polyglot Dashboard:
     
     ##### Custom Configuration Parameters:
     - key: hostname, value: locally accessible hostname or IP address for Bond Bridge (e.g., "192.168.1.145" or "ZZBL45678.local").
-    - key: token, value: local access token for Bond Bridge. Available under "Bond Settings->Advanced Settings" for the bridge in the Bond Home mobile app.
+    - key: token, value: local access token for Bond Bridge. Available under "Bond Settings&rarr;Advanced Settings" for the bridge in the Bond Home mobile app.
     
    You can also specify multiple Bond Bridges and/or SBB devices for Discovery in Custom Configuration Parmaeters by specifying a hostname and token for each, separated by semicolons (;) in the "hostname" and "token" paramaters. Make sure that the corresponding values are specified in the same order.
 2. You can optionally modify the polling interval by changing the "shortPoll" configuration parameter under Configuration - Advanced Configuration. Note that the default is 60 seconds, and because the Bond Bridge provides instantaneous state updates over UDP (BPUP), frequent polling for state is not required. The "longPoll" value is not used.
